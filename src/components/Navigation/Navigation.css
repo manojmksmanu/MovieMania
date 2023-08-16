@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* 
+ 
+
+/* navbar style start  */
+.main_nav_container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.main_nav {
+    max-width: 1440px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.menu_link ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    align-items: center;
+}
+
+.menu_link ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.responsive_btn {
+    display: none;
+}
+
+.menu_responsive {
+    display: flex;
+    align-items: start;
+    display: none;
+}
+
+.menu_responsive ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.menu_responsive ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.cart_like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width:850px) {
+    .responsive_btn {
+        display: block;
+    }
+
+    .menu_link {
+        display: none;
+    }
+
+    .main_nav {
+        height: 60px;
+    }
+
+    .menu_responsive_show {
+        display: block;
+    }
+
+    .menu_responsive_show ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu_responsive_show ul li a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+
+    }
+}

@@ -1,0 +1,15 @@
+.input_field{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.SearchIcon{
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.SearchIcon:hover{
+    transform: scale(0.9);
+}

@@ -1,0 +1,49 @@
+
+.card_{
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+.badge{
+    position: absolute;
+    right: -110px;
+    top: -20px;
+}
+.card_content img{
+    width: 100%;
+    margin: 0 auto;
+    margin-top:10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.card_content .title{
+ font-size: 20px;
+}
+.card_btn_{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+} 
+
+.card MuiModal{
+    color: white;
+    z-index: 100;
+}
+.heart{
+    cursor: pointer;
+    font-size: 25px;
+    color: red;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.heart:hover{
+    transform: scale(0.9);
+}
