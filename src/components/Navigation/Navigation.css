@@ -7,9 +7,6 @@
     font-family: "Jost", sans-serif;
 }
 
-html {
-    font-size: 62.5%;
-}
 
 a {
     text-decoration: none;
@@ -18,7 +15,9 @@ a {
 li {
     list-style: none;
 }
-
+.logo img{
+    width: 150px;
+}
 /* 
  
 
@@ -27,6 +26,10 @@ li {
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
 }
 
 .main_nav {
@@ -41,15 +44,21 @@ li {
 .menu_link ul {
     display: flex;
     justify-content: space-around;
-    gap: 80px;
+    gap: 30px;
     align-items: center;
 }
 
 .menu_link ul li a {
-    font-size: 2rem;
+    font-size: 20px;
     text-decoration: none;
     color: black;
 
+}
+.menu_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -10px;
 }
 
 .responsive_btn {

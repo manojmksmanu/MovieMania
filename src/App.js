@@ -3,14 +3,15 @@ import './App.css';
 import Movies from './pages/Movies/Movies';
 import TvSeries from './pages/TvSeries/TvSeries';
 import Home from './pages/Home/Home';
-import MoviesDetails from './pages/MoviesDetails/MoviesDetails'
+import Navigation from './components/Navigation/Navigation'
+
 function App() {
 
   return (
     <>
       <BrowserRouter>
         {/* <Header /> */}
-        {/* <Navigation /> */}
+        <Navigation />
         <div className='app' >
           <Routes>
             <Route path="/" element={<Home />} />
