@@ -1,0 +1,31 @@
+.singleCarouselItem{
+    position: relative;
+}
+.singleCarouselItem .fill{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+.fill::after{
+    background-color: blue;
+    z-index: 2;
+}
+.trending_data_container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.trending_data_container .left{
+padding: 20px;
+display: flex;
+
+}
+.left img{
+    width: 100%;
+}
+@media screen and (max-width:500px) {
+    .trending_data_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

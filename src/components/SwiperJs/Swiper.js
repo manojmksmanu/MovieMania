@@ -8,53 +8,52 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Card from '../Card/Card';
+import SingleCarouseItem from '../CarouselCard/SingleCarouseItem';
 
-export default ({data}) => {
+export default ({ data }) => {
   return (
     <Swiper
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
-    breakpoints={{
-        600: {
-            width: 600,
-            slidesPerView: 1,
-          },
-        800: {
-            width: 800,
-            slidesPerView: 2,
-          },
-        1000: {
-            width: 1000,
-            slidesPerView: 3,
-          },
-        1200: {
-          width: 1200,
-          slidesPerView: 3,
-        },
-        1300: {
-          width: 1300,
-          slidesPerView: 4,
-        },
-      }}
-    navigation
-    pagination={{ clickable: true }}
-    // scrollbar={{ draggable: true }}
-    onSwiper={(swiper) => console.log(swiper)}
-    onSlideChange={() => console.log('slide change')}
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      // breakpoints={{
+      //     600: {
+      //         width: 600,
+      //         slidesPerView: 1,
+      //       },
+      //     800: {
+      //         width: 800,
+      //         slidesPerView: 2,
+      //       },
+      //     1000: {
+      //         width: 1000,
+      //         slidesPerView: 3,
+      //       },
+      //     1200: {
+      //       width: 1200,
+      //       slidesPerView: 3,
+      //     },
+      //     1300: {
+      //       width: 1300,
+      //       slidesPerView: 4,
+      //     },
+      //   }}
+      navigation
+      // pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
     >
-          {
-                    data && data.map((c) => {
-                        return (
-                            <SwiperSlide>
-                            <Card data={c} />
-                            </SwiperSlide>
-                        )
-                    })
-                }
-      {/* <SwiperSlide></SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide> */}
-      
+      {
+        data && data.map((c) => {
+          return (
+            <SwiperSlide>
+              {/* <Card data={c} /> */}
+              <SingleCarouseItem data={c} />
+            </SwiperSlide>
+          )
+        })
+      }
+
+
     </Swiper>
   );
 };

@@ -32,9 +32,7 @@ const Home = () => {
     }, []);
     return (
         <>
-            <div className='container'>
-                <Swiper data={content} className="container" />
-            </div>
+            <Swiper data={content} />
             <div className='movies wrap_cards container'>
                 {
                     content && content.map((c) => {

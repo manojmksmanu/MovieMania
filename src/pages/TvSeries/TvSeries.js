@@ -4,6 +4,9 @@ import Card from '../../components/Card/Card';
 import '../../global.css'
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 import useFetch from '../../customHooks/Fetch';
+import RadioButton from '../../components/RadioGroup/RadioButton'
+import Title from '../../components/TitleOfPages/Title';
+import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
 const Movies = () => {
 
     const [pageNo, setPageNo] = useState(1);
@@ -11,27 +14,44 @@ const Movies = () => {
     const [selectedGenres, setSelectedGenres] = useState([]);
     const [genres, setGenres] = useState([]);
     const [content, setContent] = useState();
-    const url = `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=${pageNo}&sort_by=popularity.desc`;
+    const [showList, setShowList] = useState('airing_today')
+    const url = `https://api.themoviedb.org/3/tv/${showList}?language=en-US&page=${pageNo}`;
 
-    // ----using custom hook Fetch data---- //
+    const List = [
+        {
+            name: 'Airing Today',
+            listname: 'airing_today',
+        },
+        {
+            name: 'On The Air',
+            listname: 'on_the_air',
+        },
+        {
+            name: 'Popular',
+            listname: 'popular',
+        },
+        {
+            name: 'Top Rated',
+            listname: 'top_rated',
+        },
+    ]
+
+    // ----using custom hook Fetch data---- // 
     const { data, loading, error } = useFetch(url);
     useEffect(() => {
         data ? setContent(data.results) : setContent(null);
         data ? setPages(data.total_pages) : setPages();
     }, [data])
+
     console.log(data);
     return (
         <>
-            <div>Tv Series</div>
+            <Title title={'TvShows'} />
+            <RadioButton showList={showList} setShowList={setShowList} List={List} />
+            <h3 className='container'>{showList}</h3>
             {/* <Genres type='movie' selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPageNo={setPageNo} /> */}
             <div className='movies wrap_cards container'>
-                {
-                    content && content.map((c) => {
-                        return (
-                            <Card data={c} />
-                        )
-                    })
-                }
+                <ShowAllCards content={content} />
             </div>
             <CustomPagination pages={pages} setPageNo={setPageNo} />
         </>

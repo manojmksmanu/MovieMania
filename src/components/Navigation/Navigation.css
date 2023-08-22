@@ -12,12 +12,38 @@ a {
     text-decoration: none;
 }
 
+a::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+    border-radius: 20px;
+    width: 0%;
+    bottom: 25px;
+}
+
+a:hover::before {
+    width: 50px;
+}
+.active::before  {
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #1d74cb;
+    border-radius: 20px;
+    width: 0%;
+    bottom: 25px;
+    width: 50px;
+}
 li {
     list-style: none;
 }
-.logo img{
+
+.logo img {
     width: 150px;
 }
+
 /* 
  
 
@@ -54,7 +80,8 @@ li {
     color: black;
 
 }
-.menu_link{
+
+.menu_link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,3 +149,4 @@ li {
 
     }
 }
+

@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import './Navigation.css'
-import { Link } from 'react-router-dom'
-import { FiMenu } from 'react-icons/fi'
-import { AiOutlineDelete, AiOutlineShoppingCart } from 'react-icons/ai'
-import { FormControl, InputLabel, Select, MenuItem, Badge, dividerClasses, Button } from '@mui/material'
-import { FaShoppingCart } from "react-icons/fa"
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
     const [state, setSate] = useState(false);
 
@@ -23,16 +19,16 @@ const Navbar = () => {
                         <div className='menu_link'>
                             <ul>
                                 <li>
-                                    <Link to='/'>Home</Link>
+                                    <NavLink to='/'>Home</NavLink>
                                 </li>
                                 <li>
-                                    <Link to='/movies'>Movies</Link>
+                                    <NavLink to='/movies'>Movies</NavLink>
                                 </li>
                                 <li>
-                                    <Link to='/tvseries'>TvSeries</Link>
+                                    <NavLink to='/tvseries'>TvSeries</NavLink>
                                 </li>
                                 <li>
-                                    <Link to='/'>Contact</Link>
+                                    <NavLink to='/search'>Search</NavLink>
                                 </li>
                             </ul>
 
@@ -45,16 +41,16 @@ const Navbar = () => {
                     <div className={state ? "menu_responsive_show" : "menu_responsive"}>
                         <ul>
                             <li>
-                                <Link to='/'>Home</Link>
+                                <NavLink to='/'>Home</NavLink>
                             </li>
                             <li>
-                                <Link to='/products'>Products</Link>
+                                <NavLink to='/products'>Products</NavLink>
                             </li>
                             <li>
-                                <Link to='/about'>About</Link>
+                                <NavLink to='/about'>About</NavLink>
                             </li>
                             <li>
-                                <Link to='/'>Contact</Link>
+                                <NavLink to='/'>Contact</NavLink>
                             </li>
                         </ul>
 
