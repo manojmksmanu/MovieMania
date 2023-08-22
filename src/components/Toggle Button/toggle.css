@@ -23,3 +23,10 @@ label {
     transition: 0.2s ease-in-out;
     color: white;
 }
+@media screen and (max-width:800px) {
+    label {
+        font-size: 16px;
+        padding: 5px;
+        padding-left: 10px;
+    }
+}

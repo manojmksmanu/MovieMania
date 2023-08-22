@@ -1,0 +1,15 @@
+.search_input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.search_input input{
+    font-size: 35px;
+    color: rgb(95, 95, 95);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(164, 164, 164);
+
+}
+.search_input input:focus{
+    outline: none;
+}

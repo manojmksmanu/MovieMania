@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../components/TitleOfPages/Title'
-import RadioButton from '../../components/RadioGroup/RadioButton'
-import InputField from '../../components/InputFieldMui/InputField'
+import InputField from '../../components/InputField/InputField'
 import useFetch from '../../customHooks/Fetch'
 import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
+import Toggle from '../../components/Toggle Button/Toggle'
 const Search = () => {
     const [pageNo, setPageNo] = useState(1);
     const [pages, setPages] = useState();
@@ -38,11 +38,13 @@ const Search = () => {
     return (
         <div>
             <Title title={'Search'} />
-            <RadioButton showList={showList} setShowList={setShowList} List={List} />
+            <Toggle showList={showList} setShowList={setShowList} List={List} />
             <div className='container'>
                 <InputField value={showList} setSearch={setSearch} />
             </div>
-            <ShowAllCards content={content} />
+            { 
+                <ShowAllCards content={content} />
+            }
             {
                 pages && pages > 1 ? (<CustomPagination pages={pages} setPageNo={setPageNo} />) : (<p></p>)
             }

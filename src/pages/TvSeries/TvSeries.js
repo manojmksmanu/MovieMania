@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Genres from '../../components/Genres/Genres'
-import Card from '../../components/Card/Card';
 import '../../global.css'
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 import useFetch from '../../customHooks/Fetch';
-import RadioButton from '../../components/RadioGroup/RadioButton'
 import Title from '../../components/TitleOfPages/Title';
 import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
+import Toggle from '../../components/Toggle Button/Toggle';
 const Movies = () => {
 
     const [pageNo, setPageNo] = useState(1);
@@ -47,7 +45,7 @@ const Movies = () => {
     return (
         <>
             <Title title={'TvShows'} />
-            <RadioButton showList={showList} setShowList={setShowList} List={List} />
+            <Toggle showList={showList} setShowList={setShowList} List={List} />
             <h3 className='container'>{showList}</h3>
             {/* <Genres type='movie' selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPageNo={setPageNo} /> */}
             <div className='movies wrap_cards container'>

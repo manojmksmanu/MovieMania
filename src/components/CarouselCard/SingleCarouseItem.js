@@ -10,9 +10,21 @@ const SingleCarouseItem = ({ data }) => {
       <div className='container trending_data_container'>
         <div className='left'>
           <img src={`https://image.tmdb.org/t/p/w500${data.poster_path}`} alt='poster' className='' />
-          <ScoreSlider/>
+          {/* <ScoreSlider/> */}
         </div>
-     <div className='right'></div>
+        <div className='right'>
+          <h2>
+            {data.original_title ? data.original_title : data.original_name}
+          </h2>
+          <p>{data.media_type}</p>
+          <p>{data.release_date}</p>
+          <p> {data.vote_average}</p>
+          <p>
+            {
+              data.overview
+            }
+          </p>
+        </div>
       </div>
 
     </div>

@@ -17,7 +17,7 @@ const Card = ({ data }) => {
         <div className='upper'>
           <h3 className='title'>{data.title ? data.title : data.name}</h3>
           <div className='vote'>
-            <span>{data.vote_average.toFixed(1)}</span>
+            <span>{data.vote_average ? data.vote_average.toFixed(1) : ''}</span>
           </div>
         </div>
         <p className='date'>{data.release_date}</p>

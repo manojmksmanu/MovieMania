@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card';
 import '../../global.css'
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 import useFetch from '../../customHooks/Fetch';
-import InputField from '../../components/InputFieldMui/InputField'
+import InputField from '../../components/InputField/InputField'
 import RadioButton from '../../components/RadioGroup/RadioButton'
 import Title from '../../components/TitleOfPages/Title';
 import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
