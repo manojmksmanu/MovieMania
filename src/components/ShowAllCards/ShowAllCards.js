@@ -4,7 +4,7 @@ const ShowAllCards = ({ content }) => {
     return (
         <div>
             {
-                content ? (<div className='movies wrap_cards container'>
+                content ? (<div className='movies wrap_cards display1'>
                     {
                         content && content.map((c) => {
                             return (

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Genres from '../../components/Genres/Genres'
-import Card from '../../components/Card/Card';
 import '../../global.css'
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 import useFetch from '../../customHooks/Fetch';
-import InputField from '../../components/InputField/InputField'
-import RadioButton from '../../components/RadioGroup/RadioButton'
 import Title from '../../components/TitleOfPages/Title';
 import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
 import Toggle from '../../components/Toggle Button/Toggle'
@@ -52,10 +48,10 @@ const Movies = () => {
     }, [data])
     console.log(content)
     return (
-        <div className='container'>
+        <div>
             <Title title={'Movies'} />
             {/* <RadioButton setShowList={setShowList} showList={showList} List={List} /> */}
-            <Toggle setShowList={setShowList} showList={showList} List={List}/>
+            <Toggle setShowList={setShowList} showList={showList} List={List} />
             {/* <InputField searchMovie={searchMovie} /> */}
 
             {/* <Genres type='movie' selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPageNo={setPageNo} /> */}

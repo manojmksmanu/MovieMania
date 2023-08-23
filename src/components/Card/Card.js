@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from 'react-icons/ai'
 import './Card.css';
-import { Badge } from '@mui/material';
 import MuiModal from '../Modal/MuiModal';
 
 const Card = ({ data }) => {

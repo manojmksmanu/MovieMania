@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <>
             <div className='main_nav_container'>
-                <div className='container'>
+                <div className='display1'>
                     <nav className='main_nav set_width'>
 
                         {/* 1 div for logo */}

@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Card from '../Card/Card';
 import SingleCarouseItem from '../CarouselCard/SingleCarouseItem';
 
 export default ({ data }) => {
@@ -46,7 +45,6 @@ export default ({ data }) => {
         data && data.map((c) => {
           return (
             <SwiperSlide>
-              {/* <Card data={c} /> */}
               <SingleCarouseItem data={c} />
             </SwiperSlide>
           )

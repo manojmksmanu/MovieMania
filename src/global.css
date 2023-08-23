@@ -1,7 +1,14 @@
-.wrap_cards{
+.wrap_cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     /* justify-content: center; */
     justify-content: space-between;
+}
+
+.display1 {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
