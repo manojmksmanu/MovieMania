@@ -19,16 +19,16 @@ const Navbar = () => {
                         <div className='menu_link'>
                             <ul>
                                 <li>
-                                    <NavLink to='/'>Home</NavLink>
+                                    <NavLink className='nav_link' to='/'>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/movies'>Movies</NavLink>
+                                    <NavLink className='nav_link' to='/movies'>Movies</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/tvseries'>TvSeries</NavLink>
+                                    <NavLink className='nav_link' to='/tvseries'>TvSeries</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/search'>Search</NavLink>
+                                    <NavLink className='nav_link' to='/search'>Search</NavLink>
                                 </li>
                             </ul>
 

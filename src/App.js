@@ -5,6 +5,7 @@ import TvSeries from './pages/TvSeries/TvSeries';
 import Home from './pages/Home/Home';
 import Navigation from './components/Navigation/Navigation'
 import Search from './pages/Search/Search';
+import SingleShow from './pages/SingleShow/SingleShowMovie.js/SingleShow';
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
             <Route path="movies" element={<Movies />} />
             <Route path="search" element={<Search/>} />
             <Route path="tvseries" element={<TvSeries/>} />
+            <Route path=":id" element={<SingleShow/>} />
+            {/* <Route path="tv/:id" element={<SingleShowTv/>} /> */}
           </Routes>
         </div>
       </BrowserRouter>

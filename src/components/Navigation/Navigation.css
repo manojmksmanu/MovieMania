@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
 
-a::before {
+.nav_link::before {
     transition: 300ms;
     height: 2px;
     content: "";
@@ -23,7 +23,7 @@ a::before {
     bottom: 25px;
 }
 
-a:hover::before {
+.nav_link:hover::before {
     width: 50px;
 }
 .active::before  {

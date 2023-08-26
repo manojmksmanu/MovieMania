@@ -3,6 +3,7 @@
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
+    overflow: hidden;
 }
 
 .singleCarouselItem .fill {
@@ -16,6 +17,7 @@
 .trending_data_container {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    /* height:500px; */
 }
 
 .trending_data_container .left {

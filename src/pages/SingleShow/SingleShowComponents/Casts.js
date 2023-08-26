@@ -1,15 +1,22 @@
+import React, { useEffect, useState } from 'react'
+import useFetch from '../../../customHooks/Fetch'
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import './style.css'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Card from '../Card/Card';;
+import CardForCast from './CardForCast';
 
-export default ({ data }) => {
+const Casts = ({ id }) => {
+    const [content, setContent] = useState();
+    const { data } = useFetch(`https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`);
+
+    useEffect(() => {
+        data ? (setContent(data.cast)) : (setContent(''))
+    })
     return (
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -28,15 +35,15 @@ export default ({ data }) => {
                 },
                 1000: {
                     width: 1000,
-                    slidesPerView: 4,
+                    slidesPerView: 6,
                 },
                 1200: {
                     width: 1200,
-                    slidesPerView: 4,
+                    slidesPerView: 6,
                 },
                 1300: {
                     width: 1300,
-                    slidesPerView: 5,
+                    slidesPerView: 7,
                 },
             }}
             navigation
@@ -46,16 +53,22 @@ export default ({ data }) => {
             onSlideChange={() => console.log('slide change')}
         >
             {
-                data && data.map((c) => {
+                data && Array.from(content).map((c) => {
                     return (
-                        <SwiperSlide>
-                            <Card className='formargin' data={c} />
-                        </SwiperSlide>
+                        <div>
+                           
+                            <SwiperSlide>
+                                <CardForCast data={c} />
+                            </SwiperSlide>
+                        </div>
+
                     )
                 })
             }
 
 
         </Swiper>
-    );
-};
+    )
+}
+
+export default Casts

@@ -7,7 +7,7 @@ import TrendingMovie from '../../components/TrendingComponentsForHome/TrendingMo
 import TrendingTv from '../../components/TrendingComponentsForHome/TrendingTv';
 const Home = () => {
     const [content, setContent] = useState([]);
-    
+
 
     const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US`;
     // ----using custom hook Fetch data---- // 

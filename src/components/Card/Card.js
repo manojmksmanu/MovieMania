@@ -8,7 +8,6 @@ const Card = ({ data }) => {
   const [show, setShow] = useState(false);
   return (
     <div className='card_' key={data.id}>
-      {/* <Badge className='badge' badgeContent={data.vote_average} color="primary" sx={{ "& .MuiBadge-badge": { fontSize: 14, height: 20, minWidth: 25 } }} /> */}
       <div className='card_img'>
         <img src={`https://image.tmdb.org/t/p/w500${data.poster_path}`} alt='poster' />
       </div>
@@ -21,7 +20,16 @@ const Card = ({ data }) => {
         </div>
         <p className='date'>{data.release_date}</p>
         <div className='card_btn_'>
-          <span className='details_btn'><MuiModal id={data.id} /></span>
+
+          {/* <MuiModal id={data.id} /> */}
+          {
+            data.title ? (<span className='details_btn'>
+              <Link className='read_more_btn' to={`/${data.id}`} >Read More</Link>
+            </span>) : (<span className='details_btn'>
+              <Link className='read_more_btn' to={`/tv/${data.id}`} >Read More</Link>
+            </span>)
+          }
+
 
           <AiOutlineHeart className='heart' />
         </div>
