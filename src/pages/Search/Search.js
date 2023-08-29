@@ -19,8 +19,6 @@ const Search = () => {
         data ? setContent(data.results) : setContent(null);
         data ? setPages(data.total_pages) : setPages();
     }, [data])
-    // console.log(data.result)
-    console.log(content)
     const List = [
         {
             name: 'Movies',
@@ -42,7 +40,7 @@ const Search = () => {
             <div className='container'>
                 <InputField value={showList} setSearch={setSearch} />
             </div>
-            { 
+            {
                 <ShowAllCards content={content} />
             }
             {

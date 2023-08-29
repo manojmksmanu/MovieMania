@@ -1,0 +1,12 @@
+.show_cast_with_sidedata {
+    display: flex;
+}
+
+.show_cast {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.side_data {
+    width: 20%;
+}

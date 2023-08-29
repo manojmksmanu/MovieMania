@@ -34,9 +34,6 @@ const Movies = () => {
             listname: "upcoming",
         },
     ]
-    // const url = `https://api.themoviedb.org/3/discover/movie?page=${pageNo}`;
-    // const urlSearchMovie = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=${pageNo}`
-
     // ----using custom hook Fetch data---- //
     var url;
     search ? (url = `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=${pageNo}`) : (url = `https://api.themoviedb.org/3/movie/${showList}?language=en-US&page=${pageNo}`)
@@ -50,9 +47,7 @@ const Movies = () => {
     return (
         <div>
             <Title title={'Movies'} />
-            {/* <RadioButton setShowList={setShowList} showList={showList} List={List} /> */}
             <Toggle setShowList={setShowList} showList={showList} List={List} />
-            {/* <InputField searchMovie={searchMovie} /> */}
 
             {/* <Genres type='movie' selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPageNo={setPageNo} /> */}
             <ShowAllCards content={content} />

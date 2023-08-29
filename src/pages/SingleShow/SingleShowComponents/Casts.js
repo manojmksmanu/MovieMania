@@ -10,14 +10,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import CardForCast from './CardForCast';
 
-const Casts = ({ id }) => {
+const Casts = ({ id, type }) => {
     const [content, setContent] = useState();
-    const { data } = useFetch(`https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`);
+    const url = (type === 'movie') ? `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US` : `https://api.themoviedb.org/3/tv/${id}/credits?language=en-US`
+    const { data } = useFetch(url);
 
     useEffect(() => {
         data ? (setContent(data.cast)) : (setContent(''))
     })
     return (
+
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             breakpoints={{
@@ -53,17 +55,18 @@ const Casts = ({ id }) => {
             onSlideChange={() => console.log('slide change')}
         >
             {
-                data && Array.from(content).map((c) => {
-                    return (
-                        <div>
-                           
-                            <SwiperSlide>
-                                <CardForCast data={c} />
-                            </SwiperSlide>
-                        </div>
+                data ?
+                    data && Array.from(content).map((c) => {
+                        return (
+                            <div>
 
-                    )
-                })
+                                <SwiperSlide>
+                                    <CardForCast data={c} />
+                                </SwiperSlide>
+                            </div>
+
+                        )
+                    }) : <p>Cast Not specified</p>
             }
 
 

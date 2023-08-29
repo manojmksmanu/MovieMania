@@ -1,6 +1,6 @@
 .singleCarouselItem {
     position: relative;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     overflow: hidden;
@@ -33,19 +33,23 @@
 .right {
     width: 100%;
     /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .right h2 {
     font-size: 70px;
     font-weight: bold;
     margin-top: 20px;
-    line-height: 80px;
+    line-height: 70px;
     color: white;
 }
 
 .right p {
     font-size: 20px;
     color: white;
+    line-height: 25px;
 }
 
 .right p:nth-child(2) {
@@ -53,6 +57,51 @@
     font-weight: bold;
 }
 
+.right .banner_overview {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.right .banner_release strong {
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right .banner_spoken_language {
+    margin-top: 15px;
+}
+
+.right .banner_spoken_language strong {
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home_page_redirect {
+    font-size: 50px;
+    color: white;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #649dd6;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.home_page_redirect:hover {
+    transform: scale(0.8);
+}
+
+.sc_vote {
+    background-color: #649dd6;
+    display: inline;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.banner_btn_readmore {
+    font-size: 25px;
+}
 
 @media screen and (max-width:500px) {
     .trending_data_container {

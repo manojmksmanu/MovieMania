@@ -36,14 +36,56 @@
 }
 
 /* ////SideData */
-.side_card_component{
+.side_card_component {
     padding: 20px;
 }
-.side_card_component p{
+
+.side_card_component p {
     font-size: 15px;
     line-height: 12px;
 }
-.side_card_component .side_data_title{
+
+.side_card_component .side_data_title {
     font-size: 20px;
     margin-top: 15px;
+}
+
+/* ///networkTvjs */
+.network_logo {
+    width: 100px;
+}
+
+/* /// season.js  */
+.season_component {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.season_component .sc_left {
+    width: 250px;
+    padding: 20px;
+}
+.sc_left img{
+    width: 100%;
+    border-radius: 20px;
+}
+.sc_right{
+    padding: 20px;
+}
+.sc_right h2{
+font-weight: bold;
+}
+.sc_right ._flex{
+    height: 35px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }

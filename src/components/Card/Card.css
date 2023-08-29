@@ -80,11 +80,6 @@
     margin-top: 10px;
 }
 
-.card MuiModal {
-    color: white;
-    z-index: 100;
-}
-
 .heart {
     cursor: pointer;
     font-size: 25px;

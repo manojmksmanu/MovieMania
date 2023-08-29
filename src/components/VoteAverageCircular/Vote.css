@@ -1,0 +1,7 @@
+.circular_vote_bar{
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    height: 70px;
+    padding: 5px;
+}
