@@ -5,6 +5,7 @@ import SwiperMultipleCards from '../../components/SwiperJs/SwiperMultipleCards';
 import useFetch from '../../customHooks/Fetch';
 import TrendingMovie from '../../components/TrendingComponentsForHome/TrendingMovie';
 import TrendingTv from '../../components/TrendingComponentsForHome/TrendingTv';
+import Loader from '../../components/Loading/Loading';
 
 const Swiper = React.lazy(() => import("../../components/SwiperJs/Swiper"))
 
@@ -16,18 +17,29 @@ const Home = () => {
     useEffect(() => {
         data ? setContent(data.results) : setContent(null);
     }, [data])
+    console.log("welcome to my app")
+    if (data) {
+        return (
+            <div>
+                <Suspense fallback={<Loader setLoader='true' />}>
+                    <Swiper data={content} read={'read'} />
+                </Suspense>
+                <TrendingMovie />
+                <TrendingTv />
+            </div>
+        )
+    }
+    if (loading) {
+        return (
+            <Loader setLoader='true' />
+        )
+    }
+    if (error) {
+        return (
+            <p>something went wrong</p>
+        )
+    }
 
-
-    return (
-        <div>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Swiper data={content} read={'read'} />
-            </Suspense>
-
-            <TrendingMovie />
-            <TrendingTv />
-        </div>
-    )
 }
 
 export default Home

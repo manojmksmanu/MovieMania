@@ -17,9 +17,8 @@ const Video = ({ id }) => {
         <div className='display1'>
             {
 
-                videoKey && <iframe
-                    width="100%"
-                    height="600"
+                videoKey && <iframe className='iframe'
+                   
                     src={`https://www.youtube.com/embed/${videoKey}`}
                     title="Trailer"
                     frameborder="0"

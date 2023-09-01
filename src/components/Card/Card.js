@@ -6,7 +6,7 @@ import './Card.css';
 
 const Card = ({ data }) => {
   return (
-    <div className='card_' key={data.id}>
+    <div className='card_'>
 
       <div className='card_img'>
         {
@@ -32,11 +32,9 @@ const Card = ({ data }) => {
               <Link className='read_more_btn' to={`/tv/${data.id}`} >Read More</Link>
             </span>)
           }
-          <AiOutlineHeart className='heart' />
+          {/* <AiOutlineHeart className='heart' /> */}
         </div>
       </div>
-
-
     </div >
 
   )

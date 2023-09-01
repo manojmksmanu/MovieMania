@@ -106,3 +106,27 @@
 .read_more_btn:hover {
     background-color: #609bd6;
 }
+@media screen and (max-width:600px) {
+    .card_{
+        width: 140px;
+    }
+    .card_content .upper .title {
+        color: white;
+        font-size: 14px;
+        line-height: 15px;
+        /* position: absolute; */
+    }
+    .date {
+        color: white;
+        font-size: 12px;
+        margin-bottom: -10px;
+        margin-top: -10px;
+    }
+    .vote span {
+        color: white;
+        font-size: 10px;
+    }
+    .card_btn_ .read_more_btn{
+        font-size: 12px;
+    }
+}

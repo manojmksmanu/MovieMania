@@ -5,12 +5,11 @@ import useFetch from '../../customHooks/Fetch';
 import Title from '../../components/TitleOfPages/Title';
 import ShowAllCards from '../../components/ShowAllCards/ShowAllCards';
 import Toggle from '../../components/Toggle Button/Toggle';
+import Loader from '../../components/Loading/Loading';
 const Movies = () => {
 
     const [pageNo, setPageNo] = useState(1);
     const [pages, setPages] = useState();
-    const [selectedGenres, setSelectedGenres] = useState([]);
-    const [genres, setGenres] = useState([]);
     const [content, setContent] = useState();
     const [showList, setShowList] = useState('airing_today')
     const url = `https://api.themoviedb.org/3/tv/${showList}?language=en-US&page=${pageNo}`;
@@ -40,21 +39,27 @@ const Movies = () => {
         data ? setContent(data.results) : setContent(null);
         data ? setPages(data.total_pages) : setPages();
     }, [data])
+    if (data) {
+        return (
+            <>
+                <Title title={'TvShows'} />
+                <Toggle showList={showList} setShowList={setShowList} List={List} />
+                {/* <h3 className='container'>{showList}</h3> */}
+                <div className='movies wrap_cards container'>
+                    <ShowAllCards content={content} />
+                </div>
+                <CustomPagination pages={pages} setPageNo={setPageNo} />
+            </>
+        )
+    }
 
-    console.log(data);
-    return (
-        <>
-            <Title title={'TvShows'} />
-            <Toggle showList={showList} setShowList={setShowList} List={List} />
-            <h3 className='container'>{showList}</h3>
-            {/* <Genres type='movie' selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPageNo={setPageNo} /> */}
-            <div className='movies wrap_cards container'>
-                <ShowAllCards content={content} />
-            </div>
-            <CustomPagination pages={pages} setPageNo={setPageNo} />
-        </>
+    if (loading) {
+        <Loader setLoader={'true'} />
+    }
 
-    )
+    if (error) {
+        <p>something went wrong!!!</p>
+    }
 }
 
 export default Movies

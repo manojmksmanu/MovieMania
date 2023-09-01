@@ -89,3 +89,49 @@ font-weight: bold;
     gap: 20px;
     align-items: center;
 }
+/* //video  */
+
+.iframe{
+    width: 100%;
+    height: 600px;
+}
+
+@media screen and (max-width:600px) {
+    .show_cast_with_sidedata {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+    .cast_img {
+        width: 150px;
+    }
+    .cast_card{
+        width: 150px;
+    }
+    .cast_card_content p{
+        line-height: 14px;
+        margin-bottom: 8px;
+    }
+    .side_details_single_container{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .side_details_single_container p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .iframe{
+        height: 250px;
+    }
+    .season_component{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .season_component .sc_left {
+        width: 200px;
+    }
+}

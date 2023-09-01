@@ -10,3 +10,10 @@
 .side_data {
     width: 20%;
 }
+
+@media screen and (max-width:600px) {
+    .show_cast {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

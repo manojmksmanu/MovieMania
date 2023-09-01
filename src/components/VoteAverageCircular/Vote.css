@@ -5,3 +5,12 @@
     height: 70px;
     padding: 5px;
 }
+@media screen and (max-width:900px) {
+    .circular_vote_bar{
+        width: 40px;
+        background-color: rgba(255, 255, 255);
+        border-radius: 50%;
+        height: 40px;
+        padding: 2px;
+    }
+}

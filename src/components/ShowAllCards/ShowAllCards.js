@@ -8,11 +8,11 @@ const ShowAllCards = ({ content }) => {
                     {
                         content && content.map((c) => {
                             return (
-                                <Card data={c} />
+                                <Card data={c} key={c.id} />
                             )
                         })
                     }
-                </div>) : (<h2>Item does not exist</h2>)
+                </div>) : (<h2>Item does not exist (something went wrong!!)</h2>)
             }
         </div>
     )

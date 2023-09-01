@@ -6,7 +6,7 @@ const SideData = ({ data }) => {
             <div className='side_card_component'>
                 {
                     data.status ?
-                        <div>
+                        <div className='side_details_single_container'>
                             <strong>
                                 <p className='side_data_title'>Status:-</p>
                             </strong>
@@ -15,7 +15,7 @@ const SideData = ({ data }) => {
                 }
                 {
                     data.budget ?
-                        <div>
+                        <div className='side_details_single_container'>
                             <strong>
                                 <p className='side_data_title'>Budget:-</p>
                             </strong>
@@ -24,7 +24,7 @@ const SideData = ({ data }) => {
                 }
                 {
                     data.revenue ?
-                        <div>
+                        <div className='side_details_single_container'>
                             <strong>
                                 <p className='side_data_title'>Revenue:-</p>
                             </strong>
@@ -33,7 +33,7 @@ const SideData = ({ data }) => {
                 }
                 {
                     data.popularity ?
-                        <div>
+                        <div className='side_details_single_container'>
                             <strong className='side_data_title'>
                                 <p>Popularity:-</p>
                             </strong>
@@ -42,7 +42,7 @@ const SideData = ({ data }) => {
                 }
                 {
                     data.networks ?
-                        <div>
+                        <div className='side_details_single_container'>
                             <strong className='side_data_title'>
                                 <p>Networks:-</p>
                             </strong>

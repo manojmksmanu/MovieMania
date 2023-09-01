@@ -11,7 +11,7 @@ export default function ColorToggleButton({ setShowList, showList, List }) {
         <div className='togglebtn'>
             {
                 List && List.map((e) => {
-                    return <div className='_toggle_singlebtn'>
+                    return <div className='_toggle_singlebtn' key={e.name}>
                         <label className={showList === e.listname ? 'active_' : 'label'} htmlFor={e.listname} >{e.name}</label>
                         <input id={e.listname} type='radio' name='m' value={e.listname} onChange={(e) => {
                             setShowList(e.target.value)
@@ -21,8 +21,6 @@ export default function ColorToggleButton({ setShowList, showList, List }) {
                 })
 
             }
-
-            {/* </ToggleButtonGroup> */}
         </div>
 
     );

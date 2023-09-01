@@ -6,6 +6,7 @@ import './App.css';
 // import TvSeries from './pages/TvSeries/TvSeries';
 import Navigation from './components/Navigation/Navigation'
 import SingleShowTv from './pages/SingleShow/SingleShowTv/SingleShowTv';
+import Loader from './components/Loading/Loading';
 // import Search from './pages/Search/Search';
 // import SingleShow from './pages/SingleShow/SingleShowMovie.js/SingleShow';
 const Home = React.lazy(() => import("./pages/Home/Home"))
@@ -21,7 +22,7 @@ function App() {
         {/* <Header /> */}
         <Navigation />
         <div className='app' >
-          <Suspense fallback={<div>Loading......</div>}>
+          <Suspense fallback={<Loader setLoader={'true'} />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="movies" element={<Movies />} />
