@@ -27,8 +27,6 @@ const Video = ({ id }) => {
                 </iframe>
 
             }
-
-
         </div>
     )
 }

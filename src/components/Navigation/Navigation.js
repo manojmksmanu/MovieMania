@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Navigation.css'
 import { NavLink } from 'react-router-dom'
+import { FiMenu} from 'react-icons/fi'
 const Navbar = () => {
     const [state, setSate] = useState(false);
 
@@ -31,28 +32,34 @@ const Navbar = () => {
                                     <NavLink className='nav_link' to='/search'>Search</NavLink>
                                 </li>
                             </ul>
-
+                          
                         </div>
 
-
+  {/* toogle section  */}
+  <div className='responsive_btn'>
+                                <FiMenu style={{ fontSize: "25px" }} onClick={() => {
+                                    state: setSate(!state)
+                                }} />
+                            </div>
 
                     </nav>
                     {/* ---responsive nav only show   */}
+                    {/* ---responsive nav only show   */}
                     <div className={state ? "menu_responsive_show" : "menu_responsive"}>
-                        <ul>
-                            <li>
-                                <NavLink to='/'>Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/products'>Products</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/about'>About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/'>Contact</NavLink>
-                            </li>
-                        </ul>
+                    <ul>
+                                <li>
+                                    <NavLink className='nav_link_responsive' to='/'>Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='nav_link_responsive' to='/movies'>Movies</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='nav_link_responsive' to='/tvseries'>TvSeries</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='nav_link_responsive' to='/search'>Search</NavLink>
+                                </li>
+                            </ul>
 
                     </div>
                 </div>

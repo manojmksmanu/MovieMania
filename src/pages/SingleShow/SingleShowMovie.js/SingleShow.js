@@ -24,13 +24,14 @@ const SingleShow = () => {
 
     return (
         <div>
-            <h1>{id}</h1>
+            {/* <h1>{id}</h1> */}
             {
                 content ? (<SingleCarouseItem data={content} />) : ''
             }
-            <h4 className='display1 title_3'>Top Casts</h4>
+
             <div className='show_cast_with_sidedata display1'>
                 <div className=' show_cast'>
+                    <h4 className='display1 title_3'>Top Casts</h4>
                     <Casts id={id} type={'movie'} />
                 </div>
                 <div className='side_data'>
@@ -42,7 +43,7 @@ const SingleShow = () => {
                     content ? (<Video id={id} />) : ('')
                 }
             </div>
-            <h4 className='display1 title_3'>Recommendations</h4>
+
             <Recommendations id={id} type={'movie'} />
         </div>
     )

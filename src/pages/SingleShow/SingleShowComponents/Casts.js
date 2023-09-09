@@ -56,11 +56,11 @@ const Casts = ({ id, type }) => {
                 onSlideChange={() => console.log('slide change')}
             >
                 {
-                    data ?
-                        data && Array.from(content).map((c) => {
+                    content ?
+                        content && content.map((c) => {
                             return (
                                 <div>
-
+                                   
                                     <SwiperSlide>
                                         <CardForCast data={c} />
                                     </SwiperSlide>

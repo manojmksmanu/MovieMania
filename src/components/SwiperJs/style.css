@@ -1,3 +1,6 @@
 .swiper-wrapper{
     margin-bottom: 20px;
 }
+.swiper-button-next {
+    color: red;
+}

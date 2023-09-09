@@ -109,6 +109,8 @@
     font-size: 25px;
 }
 
+
+
 @media screen and (max-width:800px) {
     .overview {
         max-height: 70px;
@@ -131,6 +133,7 @@
     .trending_data_container .left {
         padding: 0px;
     }
+
     .left {
         display: flex;
         justify-content: center;
@@ -154,6 +157,7 @@
         color: white;
         margin-bottom: 5px;
     }
+
     .right p:nth-child(2) {
         text-transform: uppercase;
         font-weight: bold;
