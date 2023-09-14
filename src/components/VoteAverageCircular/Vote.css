@@ -1,16 +1,17 @@
-.circular_vote_bar{
-    width: 70px;
+.circular_vote_bar {
+    width: 50px;
     background-color: white;
     border-radius: 50%;
-    height: 70px;
+    height: 50px;
     padding: 5px;
 }
+
 @media screen and (max-width:900px) {
-    .circular_vote_bar{
-        width: 40px;
+    .circular_vote_bar {
+        width: 30px;
         background-color: rgba(255, 255, 255);
         border-radius: 50%;
-        height: 40px;
+        height: 30px;
         padding: 2px;
     }
 }

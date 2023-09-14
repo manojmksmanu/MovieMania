@@ -13,12 +13,12 @@ const Recommendations = ({ id, type }) => {
         <div className='display1'>
             {
                 content ?
-                <div>
-                    <h4 className='display1 title_3'>Recommendations</h4>
-                     <SwiperMultipleCards data={content} /> 
-                </div>
-                
-                 : <p>Sorry!  Recommendations not provided</p>
+                    <div>
+                        <h4 className='display1 title_3'>Recommendations</h4>
+                        <SwiperMultipleCards data={content} />
+                    </div>
+
+                    : <p>Sorry!  Recommendations not provided</p>
             }
         </div>
     )

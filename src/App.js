@@ -7,6 +7,7 @@ import './App.css';
 import Navigation from './components/Navigation/Navigation'
 import SingleShowTv from './pages/SingleShow/SingleShowTv/SingleShowTv';
 import Loader from './components/Loading/Loading';
+import Footer from './components/Footer/Footer';
 // import Search from './pages/Search/Search';
 // import SingleShow from './pages/SingleShow/SingleShowMovie.js/SingleShow';
 const Home = React.lazy(() => import("./pages/Home/Home"))
@@ -32,7 +33,7 @@ function App() {
               <Route path="movies/:id" element={<SingleShow />} />
             </Routes>
           </Suspense>
-
+       <Footer/>
         </div>
       </BrowserRouter>
 
