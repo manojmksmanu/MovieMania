@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SwiperMultipleCards from '../SwiperJs/SwiperMultipleCards';
 import useFetch from '../../customHooks/Fetch';
 import SwitchDayWeek from './SwitchDayWeek';
-
+import './TrendingStyle.css'
 const Tv = () => {
     const [content, setContent] = useState([]);
     const [dayWeek, setDayWeek] = useState('day')
@@ -23,7 +23,7 @@ const Tv = () => {
                     <SwitchDayWeek dayWeek={dayWeek} setDayWeek={setDayWeek} />
                 </span>
             </div>
-            <div className='movies wrap_cards '>
+            <div className='wrap_cards'>
                 <SwiperMultipleCards data={content} />
             </div>
         </div>

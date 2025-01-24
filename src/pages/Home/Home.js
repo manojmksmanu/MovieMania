@@ -6,7 +6,7 @@ import useFetch from '../../customHooks/Fetch';
 import TrendingMovie from '../../components/TrendingComponentsForHome/TrendingMovie';
 import TrendingTv from '../../components/TrendingComponentsForHome/TrendingTv';
 import Loader from '../../components/Loading/Loading';
-
+import '../../global.css'
 const Swiper = React.lazy(() => import("../../components/SwiperJs/Swiper"))
 
 const Home = () => {
@@ -24,8 +24,11 @@ const Home = () => {
                 <Suspense fallback={<Loader setLoader='true' />}>
                     <Swiper data={content} read={'read'} />
                 </Suspense>
+                <div style={{}}>
+
                 <TrendingMovie />
                 <TrendingTv />
+                </div>
             </div>
         )
     }

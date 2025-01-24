@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import './style.css'
 
 import SingleCarouseItem from '../CarouselCard/SingleCarouseItem';
 
@@ -33,3 +34,4 @@ export default ({ data }) => {
     </Swiper>
   );
 };
+

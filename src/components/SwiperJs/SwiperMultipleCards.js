@@ -44,6 +44,7 @@ export default ({ data }) => {
             scrollbar={{ draggable: true }}
             // onSwiper={(swiper) => console.log(swiper)}
             // onSlideChange={() => console.log('slide change')}
+            className="custom-swiper"
         >
             {
                 data && data.map((c) => {

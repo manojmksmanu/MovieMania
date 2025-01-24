@@ -1,6 +1,11 @@
-.swiper-wrapper{
-    margin-bottom: 20px;
+/* .swiper-wrapper {
+  margin-bottom: 20px;
 }
 .swiper-button-next {
-    color: red;
+  color: red;
+} */
+
+.custom-swiper {
+  width: 1200px;
+  margin: 0 auto;
 }

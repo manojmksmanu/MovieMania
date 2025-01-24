@@ -5,7 +5,7 @@ import './App.css';
 // import Movies from './pages/Movies/Movies';
 // import TvSeries from './pages/TvSeries/TvSeries';
 import Navigation from './components/Navigation/Navigation'
-import SingleShowTv from './pages/SingleShow/SingleShowTv/SingleShowTv';
+import SingleShowTv from './pages/SingleShow/SIngleShowTv/SingleShowTv';
 import Loader from './components/Loading/Loading';
 import Footer from './components/Footer/Footer';
 // import Search from './pages/Search/Search';

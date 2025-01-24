@@ -23,7 +23,6 @@ const SingleShowTv = () => {
     });
     return (
         <div >
-            {/* {id} */}
             {
                 content ? (<SingleCarouseItem data={content} />) : ''
             }
