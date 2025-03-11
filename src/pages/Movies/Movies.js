@@ -41,7 +41,7 @@ const Movies = () => {
         data ? setPages(data.total_pages) : setPages();
     }, [data])
 
-     if (loading && !data) {
+     if (loading ) {
        <Loader setLoader={"true"} />;
      }
 
