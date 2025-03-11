@@ -45,7 +45,7 @@ const Movies = () => {
                 <Title title={'TvShows'} />
                 <Toggle showList={showList} setShowList={setShowList} List={List} />
                 {/* <h3 className='container'>{showList}</h3> */}
-                <div className='movies wrap_cards container'>
+                <div className='wrap_cards container'>
                     <ShowAllCards content={content} />
                 </div>
                 <CustomPagination pages={pages} setPageNo={setPageNo} />
