@@ -1,48 +1,54 @@
-import React, { useEffect, useState, Suspense } from 'react'
-import '../../global.css'
-// import Swiper from '../../components/SwiperJs/Swiper';
-import SwiperMultipleCards from '../../components/SwiperJs/SwiperMultipleCards';
-import useFetch from '../../customHooks/Fetch';
-import TrendingMovie from '../../components/TrendingComponentsForHome/TrendingMovie';
-import TrendingTv from '../../components/TrendingComponentsForHome/TrendingTv';
-import Loader from '../../components/Loading/Loading';
-import '../../global.css'
-const Swiper = React.lazy(() => import("../../components/SwiperJs/Swiper"))
+import React, { useEffect, useState } from "react";
+import "./Home.css";
+import useFetch from "../../customHooks/Fetch";
+import TrendingMovie from "../../components/TrendingComponentsForHome/TrendingMovie";
+import TrendingTv from "../../components/TrendingComponentsForHome/TrendingTv";
+import Loader from "../../components/Loading/Loading";
+
+const Swiper = React.lazy(() => import("../../components/SwiperJs/Swiper"));
 
 const Home = () => {
-    const [content, setContent] = useState([]);
-    const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US`;
-    // ----using custom hook Fetch data---- // 
-    const { data, loading, error } = useFetch(url);
-    useEffect(() => {
-        data ? setContent(data.results) : setContent(null);
-    }, [data])
-    console.log("welcome to my app")
+  const [content, setContent] = useState([]);
+  const [homeloading, setHomeLoading] = useState();
+
+  const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US`;
+
+  // ----using custom hook Fetch data---- //
+  const { data, loading, error } = useFetch(url);
+
+  useEffect(() => {
+    setHomeLoading(loading);
+  }, [loading]);
+
+  useEffect(() => {
     if (data) {
-        return (
-            <div>
-                <Suspense fallback={<Loader setLoader='true' />}>
-                    <Swiper data={content} read={'read'} />
-                </Suspense>
-                <div style={{}}>
-
-                <TrendingMovie />
-                <TrendingTv />
-                </div>
-            </div>
-        )
+      setContent(data.results || []);
     }
-    if (loading) {
-        return (
-            <Loader setLoader='true' />
-        )
-    }
-    if (error) {
-        return (
-            <p>something went wrong</p>
-        )
-    }
+  }, [data]);
 
-}
+  console.log("Welcome to my app");
 
-export default Home
+  if (loading) {
+    return (
+      <div className="LoadingContainer">
+        <Loader setLoader="true" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p className=" ">Something went wrong</p>;
+  }
+
+  return (
+    <div>
+      <Swiper data={content} read={"read"} />
+      <div>
+        <TrendingMovie setHomeLoading={setHomeLoading} />
+        <TrendingTv setHomeLoading={setHomeLoading} />
+      </div>
+    </div>
+  );
+};
+
+export default Home;

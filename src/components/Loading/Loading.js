@@ -12,16 +12,18 @@ function Loader({ setLoader }) {
     let [color, setColor] = useState("#ffffff");
 
     return (
+      <div style={{width:"100vw",height:"90vh",display:'flex',justifyContent:'center',alignItems:'center'}}>
         <div className="sweet-loading">
-            <ClipLoader
-                color={color}
-                loading={loading}
-                cssOverride={override}
-                size={150}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            />
+          <ClipLoader
+            color={color}
+            loading={loading}
+            cssOverride={override}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
         </div>
+      </div>
     );
 }
 
