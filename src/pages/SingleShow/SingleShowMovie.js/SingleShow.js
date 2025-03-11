@@ -42,12 +42,12 @@ const SingleShow = () => {
 
         <div className="show_cast_with_sidedata display1">
           <div className=" show_cast">
-            <h4 className="display1 title_3">Top Casts</h4>
+          
             <Casts id={id} type={"movie"} setSingleLoading={setSingleLoading} />
           </div>
-          <div className="side_data">
+          {/* <div className="side_data"> */}
             <SideData data={content} />
-          </div>
+          {/* </div> */}
         </div>
         <div>{content ? <Video id={id} /> : ""}</div>
 

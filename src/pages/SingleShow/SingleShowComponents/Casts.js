@@ -30,9 +30,9 @@ const Casts = ({ id, type, setSingleLoading }) => {
   useEffect(() => {
     setSingleLoading(loading);
   }, [loading]);
- 
-  if(loading){
-    return null
+
+  if (loading) {
+    return null;
   }
 
   if (error) {
@@ -40,11 +40,12 @@ const Casts = ({ id, type, setSingleLoading }) => {
   }
 
   if (!content || content.length === 0) {
-    return <p className="no-cast">Cast information not available</p>;
+    return null;
   }
 
   return (
     <div className="casts-container">
+      <h4 className="display1 title_3">Top Casts</h4>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={15}

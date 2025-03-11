@@ -41,6 +41,10 @@ const Movies = () => {
         data ? setPages(data.total_pages) : setPages();
     }, [data])
 
+     if (loading && !data) {
+       <Loader setLoader={"true"} />;
+     }
+
     if (data) {
         return (
             <div>
@@ -53,9 +57,7 @@ const Movies = () => {
             </div>
         )
     }
-    if (loading) {
-        <Loader setLoader={'true'} />
-    }
+   
     if (error) {
         <p>something went wrong!!!</p>
     }

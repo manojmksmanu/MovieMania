@@ -1,5 +1,6 @@
 .show_cast_with_sidedata {
     display: flex;
+    flex-direction: column;
 }
 
 .show_cast {

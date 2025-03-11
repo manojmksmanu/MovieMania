@@ -1,132 +1,128 @@
 .card_ {
-    position: relative;
-    border-radius: 10px;
-    width: 250px;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  width: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 350px;
 }
 
-/* .badge {
-    position: absolute;
-    right: -110px;
-    top: -20px;
-} */
-
 .card_img img {
-    width: 100%;
-    /* margin: 0 auto; */
-    border-radius: 10px;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card_img img:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .card_content {
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    width: 100%;
-    /* From https://css.glass */
-    background: rgba(22, 22, 22, 0.5);
-    border-radius: 16px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(22, 22, 22, 0.5);
+  border-radius: 16px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
 }
 
 .card_content .upper {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .card_content .upper .title {
-    color: white;
-    font-size: 20px;
-    line-height: 22px;
-    /* position: absolute; */
+  color: white;
+  font-size: 20px;
+  line-height: 22px;
+  /* position: absolute; */
 }
 
 .vote {
-    width: 50px;
-    height: 20px;
-    border-radius: 20%;
-    background-color: #1e78d2;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 50px;
+  height: 20px;
+  border-radius: 20%;
+  background-color: #1e78d2;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vote span {
-    color: white;
-    font-size: 14px;
+  color: white;
+  font-size: 14px;
 }
 
 .date {
-    color: white;
+  color: white;
 }
 
 .card_btn_ {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .heart {
-    cursor: pointer;
-    font-size: 25px;
-    color: red;
-    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  font-size: 25px;
+  color: red;
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .heart:hover {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .read_more_btn {
-    text-decoration: none;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    padding-left: 10px;
-    background-color: #1e78d2;
-    padding-right: 10px;
-    border-radius: 2px;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding-left: 10px;
+  background-color: #1e78d2;
+  padding-right: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .read_more_btn:hover {
-    background-color: #609bd6;
+  background-color: #609bd6;
 }
-@media screen and (max-width:600px) {
-    .card_{
-        width: 140px;
-    }
-    .card_content .upper .title {
-        color: white;
-        font-size: 14px;
-        line-height: 15px;
-        /* position: absolute; */
-    }
-    .date {
-        color: white;
-        font-size: 12px;
-        margin-bottom: -10px;
-        margin-top: -10px;
-    }
-    .vote span {
-        color: white;
-        font-size: 10px;
-    }
-    .card_btn_ .read_more_btn{
-        font-size: 12px;
-    }
+@media screen and (max-width: 600px) {
+  .card_ {
+    width: 140px;
+    height: 200px;
+  }
+  .card_content .upper .title {
+    color: white;
+    font-size: 14px;
+    line-height: 15px;
+    /* position: absolute; */
+  }
+  .date {
+    color: white;
+    font-size: 12px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+  .vote span {
+    color: white;
+    font-size: 10px;
+  }
+  .card_btn_ .read_more_btn {
+    font-size: 12px;
+  }
 }
